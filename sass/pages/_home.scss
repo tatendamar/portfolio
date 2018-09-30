@@ -1,0 +1,57 @@
+.section-about {
+  background-color: $background-color-1;
+  padding: 25rem 0;
+  margin-top: -20vh;
+  margin-bottom: -30rem;
+
+  &__right {
+    width: 30rem;
+    height: 30rem;
+    float: center;
+    background-color: orangered;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(9rem);
+    position: relative;
+    transition: all 0.5s;
+  }
+
+  &__img {
+    height: 100%;
+    transform: translateY(-0.5px) scale(1);
+    backface-visibility: hidden;
+    transition: all 0.5s;
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    letter-spacing: 6px;
+    text-align: center;
+    opacity: 0;
+    backface-visibility: hidden;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__img {
+    transform: translateY(-0.5px) scale(1.1);
+    filter: blur(3px) brightness(80%);
+  }
+}
+
+.section-projects {
+  background-color: $background-color-1;
+  padding: 25rem 0 30rem 0;
+}
